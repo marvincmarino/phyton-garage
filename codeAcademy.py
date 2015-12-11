@@ -25,5 +25,6 @@ def is_prime(x):
     print("Is prime.")
     return True
 
+# user input
 number = int(raw_input("Enter a number:"))
 is_prime(number)
