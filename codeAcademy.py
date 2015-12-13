@@ -1,20 +1,15 @@
 # coding=utf-8
-import math
 
 # test if a number is prime
-# in code academy breaks for x = -10, error:
-# Oops, try again. Your function fails on is_prime(-10). It returns True when it should return False.
 
 import math
-
-# test if a number is prime
 
 def is_prime(x):
-    exceptions = [0,1]
-    if x in exceptions:
+    if x <= 1:  # exceptions 1 and negative integers are not prime
+        print("Is not prime.")
         return False
-    for i in range(x, x-1):
-        result = x / float(i) # trick to get result as float
+    for i in range(2, x):
+        result = x / float(i)  # trick to get result as float
         check = result - math.floor(result)
         if check == 0:
             print("Is not prime.")
